@@ -1,0 +1,72 @@
+---
+title: "What a Series A diligence team actually looks at in your Azure tenant"
+description: "Diligence on a startup's Azure environment is shorter than founders expect and more pointed. The questions get asked in the same order every time. Here is the list."
+publishedAt: 2026-04-08
+topics: ["due-diligence", "series-a"]
+---
+
+A Series A technical due diligence on an Azure tenant takes a senior architect about a day. Sometimes two if there is something unusual to chase down. The investor's team is not auditing your code. They are answering one question: if this round closes and the company doubles its engineering team, does the platform survive contact with growth?
+
+The questions get asked in the same order every time. If you have answered them before the call, the call is a formality. If you have not, the call is an exposure.
+
+## Identity
+
+The first place a diligence team looks is Microsoft Entra ID. Not because identity is the most exciting topic but because it is the cheapest signal. Three things get checked.
+
+Multi-factor authentication on every account. Conditional Access policies that block legacy authentication. Privileged Identity Management on Owner and User Access Administrator roles. If any of those is missing, the rest of the call is harder.
+
+A bonus signal: how many accounts have permanent Owner or Contributor on a subscription? More than three is a story the founder needs to be ready to tell.
+
+## Subscription and management group structure
+
+A flat tenant with five subscriptions named after the founders' initials is not disqualifying. It is, however, a tell. The diligence team will assume the rest of the platform was built the same way.
+
+A management group hierarchy with at least a separation between production and non-production, and Azure Policy assigned at the management-group level, signals that someone has thought about scale. A landing zone aligned to the Cloud Adoption Framework is rarer and noticed.
+
+## Network posture
+
+Public IPs on databases. Storage accounts with the firewall set to allow all networks. App Services with no inbound restrictions. Each one is a finding, and findings compound.
+
+The standard you want to clear is straightforward. Data services are reachable through private endpoints, not public IPs. Egress is controlled. The diagram you hand over has a hub VNet and the rationale for the topology.
+
+## Secrets
+
+A diligence team will search the repos for the strings `connectionString`, `accountKey`, `client_secret` and a handful of others. They will check whether Key Vault exists, whether services use managed identity to read from it, and whether anyone is still injecting secrets into App Service application settings as plain text.
+
+The right answer is Key Vault, managed identities, and a CI step that fails on hard-coded secrets. The wrong answer is "we have been meaning to fix that."
+
+## Cost
+
+The investor cares about cost in two ways. The absolute monthly run rate, and whether the trajectory matches the product story. A startup spending six thousand a month while serving fifty users is not a cost problem. A startup spending six thousand a month while serving fifty users and forecasting twenty thousand a month at five hundred users is.
+
+A clean Cost Management view, with tagging that lets you split spend by environment and feature, answers this in one screenshot. Without tagging, the answer is a forty-minute conversation that ends inconclusively.
+
+## Backup and recovery
+
+The two questions are RTO and RPO. The two answers most startups give are "we have not measured" and "we have not tested." That is not always disqualifying at Series A but it is always raised.
+
+A backup policy on every database, geo-redundancy on critical storage, and a written recovery runbook that has been rehearsed at least once. That is the bar.
+
+## Logging and observability
+
+Where do logs go, how long are they retained, and who watches them? The diligence team is not asking for a SIEM. They are asking whether the team would notice if something went wrong.
+
+Diagnostic settings on every resource, sent to a Log Analytics workspace with at least ninety days of retention. Alerts on the things that matter, not on everything. A clear answer to "who gets paged at 3 a.m." even if the answer is "nobody, this is a B2B product and we have a six-hour SLA."
+
+## Compliance posture
+
+If the company sells to enterprise or to regulated buyers, the diligence team will ask for the latest Defender for Cloud Secure Score and a Microsoft Compliance Manager export. A Secure Score above eighty is good. Below sixty is a finding.
+
+For ISO 27001 or SOC 2 conversations, expect questions about policy assignments, access reviews and the audit log. Have the evidence pack ready before the meeting.
+
+## What we tell founders to do thirty days before diligence
+
+Three things, in order.
+
+Run a Well-Architected Framework review yourself, write down the gaps, and prioritise them. Close the top five before diligence. Document the rest with a date next to each.
+
+Take the Defender for Cloud Secure Score from whatever it is now to above seventy. Most of the work is small.
+
+Write a one-page architecture overview. Hub-spoke diagram, identity model, data flow, secrets handling, deployment pipeline. Hand it to the diligence team in the first email. The conversation that follows will be about your business, not your tenant.
+
+Diligence is not a test of perfection. It is a test of whether the team has been deliberate. Be deliberate.

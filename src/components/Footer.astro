@@ -1,0 +1,52 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { BUILD, SITE } from "~/consts";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-32 border-t border-[color:var(--color-rule)]">
+  <div class="container-page py-10 grid gap-10 md:grid-cols-12">
+    <div class="md:col-span-5">
+      <p class="text-sm text-[color:var(--color-fg-strong)] font-semibold">
+        {SITE.name}
+      </p>
+      <p class="mt-2 text-sm text-[color:var(--color-muted)] max-w-sm">
+        Fractional Azure architecture for seed and Series A startups. UK based, available across Western Europe and selected international markets.
+      </p>
+    </div>
+
+    <nav class="md:col-span-3 text-sm" aria-label="Footer">
+      <p class="mono text-xs uppercase tracking-wide text-[color:var(--color-muted)]">Site</p>
+      <ul class="mt-3 space-y-1.5">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/writing">Writing</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/colophon">Colophon</a></li>
+      </ul>
+    </nav>
+
+    <div class="md:col-span-4 text-sm">
+      <p class="mono text-xs uppercase tracking-wide text-[color:var(--color-muted)]">Contact</p>
+      <ul class="mt-3 space-y-1.5">
+        <li>
+          <a href={`mailto:${SITE.email}`} class="mono">{SITE.email}</a>
+        </li>
+        <li class="text-[color:var(--color-muted)]">United Kingdom · GMT/BST</li>
+      </ul>
+      <div class="mt-5">
+        <ThemeToggle />
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-[color:var(--color-rule)]">
+    <div class="container-page py-4 flex flex-wrap items-center justify-between gap-3 text-xs mono text-[color:var(--color-muted)]">
+      <span>© {year} Blue Slab Velocity Ltd</span>
+      <span>
+        v{BUILD.version} · build {BUILD.id} · {BUILD.commit}
+      </span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,6 @@
+{
+  "name": "blueslabvelocity-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "enquiry/index.js"
+}

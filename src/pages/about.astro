@@ -1,0 +1,215 @@
+---
+import Page from "~/layouts/Page.astro";
+import Annotation from "~/components/Annotation.astro";
+
+const certs = [
+  "AZ-104",
+  "AZ-305",
+  "AZ-400",
+  "CKA",
+  "Terraform Associate",
+  "FinOps Practitioner",
+] as const;
+
+const sectors = [
+  "FinTech",
+  "HealthTech",
+  "LegalTech",
+  "PropTech",
+  "EdTech",
+  "Public sector",
+  "B2B SaaS",
+] as const;
+
+const expertise = [
+  "Azure landing zones",
+  "Microsoft Entra ID",
+  "Microsoft Foundry",
+  "Event-driven architecture (Event Grid, Service Bus)",
+  "Azure Kubernetes Service",
+  "GitHub Enterprise and Azure DevOps",
+  "Terraform and Bicep",
+  "Networking and private connectivity",
+  "Data platforms",
+  "Agentic AI infrastructure",
+] as const;
+---
+
+<Page
+  title="About"
+  description="About the founder of Blue Slab Velocity. Senior Azure architect, NSV (SC) cleared, with ten years across FinTech, HealthTech and the public sector."
+  path="/about"
+>
+  <section class="container-page pt-16 pb-12 border-b border-[color:var(--color-rule)]">
+    <Annotation label="// about · principal" />
+    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.05] max-w-3xl">
+      The architect behind Blue Slab Velocity
+    </h1>
+    <p class="mt-5 text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed">
+      I started BSV because the founders I most wanted to work with could not afford the people they most needed. This is the alternative.
+    </p>
+  </section>
+
+  <section class="container-page py-16 grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-7 space-y-6 text-[1.0625rem] leading-relaxed">
+      <Annotation label="// bio" />
+      <p>
+        I am a senior Azure architect with more than ten years of platform engineering across FinTech, HealthTech and the UK public sector. I hold NSV (SC) clearance and a stack of current Microsoft and infrastructure certifications. I have built landing zones for regulated banks, taken AI services from prototype to production, and untangled enough inherited Azure tenants to know what good looks like.
+      </p>
+      <p>
+        BSV is the company I would have wanted as a startup CTO. A senior practitioner you can hire by the package, who shows up, does the work, hands it over, and is honest about what is not in scope. No account manager between you and the architect. No subcontracted juniors with the brand on their email signature.
+      </p>
+      <p>
+        I work with one founder at a time per engagement and run no more than four at once. The cap is deliberate. It is what makes this model honest.
+      </p>
+    </div>
+
+    <aside class="lg:col-span-4 lg:col-start-9 space-y-8">
+      <div>
+        <Annotation label="// certifications" />
+        <ul class="mt-3 flex flex-wrap gap-1.5">
+          {certs.map((c) => (
+            <li class="mono text-xs px-2 py-1 border border-[color:var(--color-rule)] text-[color:var(--color-fg-strong)]">{c}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <Annotation label="// clearance" />
+        <p class="mono mt-3 text-sm text-[color:var(--color-fg-strong)]">NSV (SC) cleared</p>
+      </div>
+      <div>
+        <Annotation label="// based" />
+        <p class="mono mt-3 text-sm text-[color:var(--color-fg-strong)]">United Kingdom · GMT/BST</p>
+        <p class="mt-1 text-sm text-[color:var(--color-muted)]">Available to travel to client sites within the UK.</p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="container-page py-16 border-t border-[color:var(--color-rule)] grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <Annotation label="// expertise" />
+      <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+        What I bring to the table
+      </h2>
+    </div>
+    <div class="lg:col-span-7 lg:col-start-6">
+      <ul class="grid gap-px bg-[color:var(--color-rule)] border border-[color:var(--color-rule)] sm:grid-cols-2">
+        {expertise.map((e) => (
+          <li class="bg-[color:var(--color-bg-elev)] px-4 py-3 text-sm text-[color:var(--color-fg)]">
+            {e}
+          </li>
+        ))}
+      </ul>
+      <p class="mt-6 mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">
+        // sectors served
+      </p>
+      <ul class="mt-3 flex flex-wrap gap-1.5">
+        {sectors.map((s) => (
+          <li class="mono text-xs px-2 py-1 border border-[color:var(--color-rule)] text-[color:var(--color-fg)]">{s}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="container-page py-16 border-t border-[color:var(--color-rule)] grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+      <Annotation label="// how I work" />
+      <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+        How I work
+      </h2>
+    </div>
+    <div class="lg:col-span-7">
+      <ol class="border-y border-[color:var(--color-rule)] divide-y divide-[color:var(--color-rule)]">
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">01</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Fixed scope, written down</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">Every engagement has a one-page SOW that we both sign before the work starts.</p>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">02</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Direct access</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">You speak to the architect doing the work. There is no account manager.</p>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">03</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Async by default, calls when they earn their place</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">Slack, Teams or email inside business hours. One scheduled call a week, more if the work needs it.</p>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">04</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Code in your repos, not mine</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">All Terraform, Bicep, pipelines and documentation land in your GitHub or Azure DevOps from day one.</p>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">05</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Hand-over you can hire against</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">Documentation written so the next engineer you hire is productive on day one.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="container-page py-16 border-t border-[color:var(--color-rule)] grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-5">
+      <Annotation label="// what I won't do" />
+      <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+        What I will not do
+      </h2>
+      <p class="mt-3 text-[color:var(--color-muted)]">
+        Saying no to the wrong work is how I deliver the right work.
+      </p>
+    </div>
+    <div class="lg:col-span-7">
+      <ul class="border border-[color:var(--color-rule)] divide-y divide-[color:var(--color-rule)]">
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">Hourly billing or open-ended retainers</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">Every engagement is fixed-scope and fixed-price, or a clearly bounded retainer with a 30-day notice.</p>
+        </li>
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">AWS or GCP work</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">BSV is Azure only. If you need a cloud-agnostic team, I will tell you who to call.</p>
+        </li>
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">Equity in lieu of payment</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">BSV is a service business, not a co-investor. The cap table stays clean.</p>
+        </li>
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">Work outside the ICP</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">If you are a 5,000-person enterprise, an MSP will serve you better. I am built for the seed-to-Series-A reality.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container-page py-20">
+    <div class="border border-[color:var(--color-rule)] p-8 md:p-10 grid gap-6 md:grid-cols-12 items-center">
+      <div class="md:col-span-8">
+        <Annotation label="// contact" />
+        <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+          Want to talk?
+        </h2>
+        <p class="mt-3 text-[color:var(--color-muted)]">
+          A 30-minute call is the fastest way to find out if we are a fit.
+        </p>
+      </div>
+      <div class="md:col-span-4 md:text-right">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] mono text-sm font-medium hover:bg-[color:var(--color-accent-strong)] transition-colors"
+        >
+          Book a discovery call →
+        </a>
+      </div>
+    </div>
+  </section>
+</Page>

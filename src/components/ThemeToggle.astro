@@ -1,0 +1,49 @@
+---
+// Tiny island. ~280 B of JS once minified.
+---
+
+<button
+  type="button"
+  data-theme-toggle
+  class="mono text-xs px-2 py-1 border border-[color:var(--color-rule)] rounded-[2px] text-[color:var(--color-muted)] hover:text-[color:var(--color-fg-strong)] hover:border-[color:var(--color-accent)] transition-colors"
+  aria-label="Toggle colour scheme"
+>
+  <span data-theme-label>theme</span>
+</button>
+
+<script>
+  function apply(theme: "dark" | "light") {
+    document.documentElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("bsv-theme", theme);
+    } catch {}
+    syncLabels();
+  }
+  function current(): "dark" | "light" {
+    return document.documentElement.getAttribute("data-theme") === "light"
+      ? "light"
+      : "dark";
+  }
+  function syncLabels() {
+    const next = current() === "dark" ? "light" : "dark";
+    document
+      .querySelectorAll<HTMLElement>("[data-theme-label]")
+      .forEach((el) => {
+        el.textContent = `→ ${next}`;
+      });
+  }
+  function bind() {
+    document
+      .querySelectorAll<HTMLButtonElement>("[data-theme-toggle]")
+      .forEach((btn) => {
+        if ((btn as unknown as { _bsvBound?: boolean })._bsvBound) return;
+        (btn as unknown as { _bsvBound?: boolean })._bsvBound = true;
+        btn.addEventListener("click", () =>
+          apply(current() === "dark" ? "light" : "dark"),
+        );
+      });
+    syncLabels();
+  }
+  bind();
+  document.addEventListener("astro:page-load", bind);
+</script>

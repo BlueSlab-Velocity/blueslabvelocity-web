@@ -1,0 +1,86 @@
+---
+import { getCollection, render } from "astro:content";
+import Page from "~/layouts/Page.astro";
+import Annotation from "~/components/Annotation.astro";
+import { formatDate, isoDate, readingTime } from "~/lib/format";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("writing", ({ data }) => !data.draft);
+  posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: {
+      post,
+      prev: posts[i + 1],
+      next: posts[i - 1],
+    },
+  }));
+}
+
+const { post, prev, next } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(post);
+const rt = readingTime(post.body ?? "");
+---
+
+<Page
+  title={post.data.title}
+  description={post.data.description}
+  path={`/writing/${post.id}`}
+  type="article"
+  publishedTime={post.data.publishedAt.toISOString()}
+>
+  <article class="container-page pt-12 pb-20">
+    <p class="text-sm">
+      <a href="/writing" class="mono text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)]">
+        ← all writing
+      </a>
+    </p>
+
+    <header class="mt-8 max-w-3xl">
+      <Annotation label="// writing" />
+      <h1
+        class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.08]"
+        transition:name={`post-${post.id}`}
+      >
+        {post.data.title}
+      </h1>
+      <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 mono text-xs text-[color:var(--color-muted)]">
+        <time datetime={isoDate(post.data.publishedAt)}>
+          {formatDate(post.data.publishedAt)}
+        </time>
+        <span aria-hidden="true">·</span>
+        <span>{rt}</span>
+        <span aria-hidden="true">·</span>
+        <span>by Blue Slab Velocity</span>
+      </div>
+    </header>
+
+    <hr class="my-10 max-w-3xl" />
+
+    <div class="prose container-prose">
+      <Content />
+    </div>
+
+    <nav
+      aria-label="More writing"
+      class="mt-20 pt-8 border-t border-[color:var(--color-rule)] grid gap-6 sm:grid-cols-2"
+    >
+      {prev ? (
+        <a href={`/writing/${prev.id}`} class="group block">
+          <span class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">← previous</span>
+          <span class="block mt-2 text-[color:var(--color-fg-strong)] group-hover:text-[color:var(--color-accent)] transition-colors">
+            {prev.data.title}
+          </span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a href={`/writing/${next.id}`} class="group block sm:text-right">
+          <span class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">next →</span>
+          <span class="block mt-2 text-[color:var(--color-fg-strong)] group-hover:text-[color:var(--color-accent)] transition-colors">
+            {next.data.title}
+          </span>
+        </a>
+      ) : <span></span>}
+    </nav>
+  </article>
+</Page>

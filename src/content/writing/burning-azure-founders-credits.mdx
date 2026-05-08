@@ -1,0 +1,54 @@
+---
+title: "How to burn through Azure Founders credits in six weeks"
+description: "Most startups treat Founders Hub credits as free runway. The ones that get a second tranche treat them as a managed budget from day one. Here is what changes."
+publishedAt: 2026-04-22
+topics: ["cost", "founders-hub"]
+---
+
+A founder forwarded me a Microsoft Founders Hub welcome email last month. Twenty-five thousand US dollars of Azure credits, twelve months to spend them, and a Slack message that said "we're in, the cloud bill is sorted for the year."
+
+Six weeks later they were back, asking why the credit balance was already past sixty percent. The honest answer is that Founders credits are not free runway. They are a budget that disappears whether you are watching or not, and the defaults in Azure assume someone is watching.
+
+Here is what I see go wrong, in roughly the order it goes wrong, and what to do instead.
+
+## A Premium SKU chosen on the first day
+
+Most teams set up an App Service plan, a database and a cache in the first week. The default tier in the portal for App Service is Premium V3. The default for Azure SQL is General Purpose, four vCores. Azure Cache for Redis defaults to Premium. None of these are wrong for production. All of them are wrong for week one.
+
+The fix is boring. Standard tiers, the smallest SKU that runs your workload, and a written rule that nothing moves to Premium without a reason that ends with the words "for production users." The credits saved here pay for everything else.
+
+## Storage that nobody is paying attention to
+
+Diagnostic logs to a storage account, a backup policy that never expires, snapshots of disks that were attached to a VM that was deleted three months ago. None of it shows up on a dashboard until you go looking. All of it bills.
+
+A lifecycle policy on every storage account is a one-line piece of Bicep. Set hot to cool at thirty days, cool to archive at ninety, delete at three sixty five. Tag everything. If a resource has no owner tag, it should not exist.
+
+## Idle compute that the team forgot to switch off
+
+The sandbox subscription is the single largest source of waste in every tenant I have looked at. A developer span up an AKS cluster to test something. A data engineer started a Synapse workspace and went on holiday. A C-level demoed an OpenAI deployment to an investor and never deleted it.
+
+Auto-shutdown on Dev Test Labs, schedules on VMs, and a weekly Azure Resource Graph query that lists everything created more than seven days ago in any subscription tagged `env=sandbox`. Send the result to the engineering channel every Monday morning. The list will be embarrassing for the first month and empty by the third.
+
+## Reserved Instances purchased too early
+
+The opposite mistake. A founder reads about Azure Reserved Instances saving forty percent and locks in a one-year reservation in week three. Two months later the architecture has changed, the workload has moved to a different SKU and the reservation does not match anything they run.
+
+Reservations are a tool for steady-state workloads. Until you have ninety days of stable usage in a service, the right answer is on-demand or a Savings Plan with shorter commitment terms. The credit is not running out faster because you waited.
+
+## Defender for Cloud at the wrong tier
+
+Defender is enabled by default on the free tier. The first time someone enables it for a database or a storage account at the standard tier, every other resource of the same type in the subscription enrols too. The bill arrives a month later.
+
+This is a setting, not a strategy. Enable Defender at the standard tier deliberately, on the resources that need it, in the subscriptions that need it. Audit it every quarter.
+
+## What I tell founders before they spend the first credit
+
+Three things.
+
+One: enable Cost Management budgets and alerts on day one. A weekly email when the run rate exceeds the credit ceiling pro-rated by month is enough to catch the worst surprises before they compound.
+
+Two: tag everything with `environment`, `owner` and `cost-centre`. The tagging policy is a five-minute implementation. The cost attribution it gives you is the difference between knowing where the spend went and guessing.
+
+Three: write down the architecture target. If the credit is going to keep you alive for twelve months, the target is fifty percent burned at month nine. If the credit is going to run out before product-market fit, that is a fundraising decision, not a cloud one.
+
+Founders Hub credits are generous. They are also temporary. The teams that use them well treat them like the runway they are, not the windfall they look like.

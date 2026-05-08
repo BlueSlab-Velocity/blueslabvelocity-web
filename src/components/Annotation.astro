@@ -1,0 +1,15 @@
+---
+interface Props {
+  /** Mono label, e.g. "// BSV-PKG-01" */
+  label: string;
+  class?: string;
+}
+const { label, class: className = "" } = Astro.props;
+---
+
+<span
+  class:list={[
+    "mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]",
+    className,
+  ]}
+>{label}</span>

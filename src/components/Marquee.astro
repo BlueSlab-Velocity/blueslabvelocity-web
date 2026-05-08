@@ -1,0 +1,26 @@
+---
+const logos = [
+  "Microsoft for Startups", "Azure OpenAI", "AKS", "Bicep", "Terraform",
+  "Entra ID", "Front Door", "Cosmos DB", "Azure Functions", "Container Apps",
+  "Defender for Cloud", "Application Gateway", "Service Bus", "Event Grid",
+  "API Management", "Log Analytics", "Key Vault", "Private Link",
+];
+const doubled = [...logos, ...logos];
+---
+<section aria-label="Stack" class="border-b border-white/10">
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-10 py-6 flex items-center gap-8">
+    <span class="hidden md:inline shrink-0 font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">
+      Stack&nbsp;·&nbsp;Battle-tested
+    </span>
+    <div class="relative flex-1 overflow-hidden no-scrollbar [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+      <ul class="marquee-track flex w-max items-center gap-10 whitespace-nowrap font-mono text-[12px] tracking-[0.06em] text-white/55">
+        {doubled.map((l) => (
+          <li class="inline-flex items-center gap-3">
+            <span class="h-1 w-1 rounded-full bg-white/30"></span>
+            {l}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

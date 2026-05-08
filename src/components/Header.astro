@@ -1,0 +1,36 @@
+---
+import Mark from "./Mark.astro";
+import { NAV } from "~/consts";
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+function isActive(href: string): boolean {
+  if (href === "/") return currentPath === "/";
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
+---
+
+<header class="border-b border-[color:var(--color-rule)]">
+  <div class="container-page flex h-14 items-center justify-between gap-6">
+    <Mark />
+    <nav aria-label="Primary" class="flex items-center gap-1 text-sm">
+      {NAV.map((item) => (
+        <a
+          href={item.href}
+          aria-current={isActive(item.href) ? "page" : undefined}
+          class:list={[
+            "px-2.5 py-1.5 rounded-[2px] transition-colors",
+            isActive(item.href)
+              ? "text-[color:var(--color-fg-strong)]"
+              : "text-[color:var(--color-muted)] hover:text-[color:var(--color-fg-strong)]",
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

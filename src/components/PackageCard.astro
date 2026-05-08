@@ -1,0 +1,35 @@
+---
+import type { Package } from "~/lib/packages";
+import { formatGBP } from "~/lib/format";
+
+interface Props {
+  pkg: Package;
+}
+const { pkg } = Astro.props;
+---
+
+<a
+  href={`/services/${pkg.slug}`}
+  class="group block border border-[color:var(--color-rule)] hover:border-[color:var(--color-accent)] transition-colors bg-[color:var(--color-bg-elev)]"
+>
+  <div class="px-5 pt-4 pb-3 border-b border-[color:var(--color-rule)] flex items-center justify-between gap-3">
+    <span class="mono text-xs text-[color:var(--color-muted)]">{pkg.code}</span>
+    <span class="mono text-xs text-[color:var(--color-muted)]">{pkg.delivery}</span>
+  </div>
+  <div class="px-5 py-5">
+    <h3 class="text-base font-semibold text-[color:var(--color-fg-strong)] tracking-tight">
+      {pkg.name}
+    </h3>
+    <p class="mt-2 text-sm text-[color:var(--color-muted)] leading-relaxed">
+      {pkg.summary}
+    </p>
+  </div>
+  <div class="px-5 py-3 border-t border-[color:var(--color-rule)] flex items-baseline justify-between">
+    <span class="mono text-sm text-[color:var(--color-fg-strong)]">
+      {formatGBP(pkg.price)}{pkg.priceSuffix ?? ""}
+    </span>
+    <span class="mono text-xs text-[color:var(--color-muted)] group-hover:text-[color:var(--color-accent)] transition-colors">
+      view spec →
+    </span>
+  </div>
+</a>

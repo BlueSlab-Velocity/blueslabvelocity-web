@@ -1,0 +1,120 @@
+---
+import Page from "~/layouts/Page.astro";
+import Grid from "~/components/Grid.astro";
+import Annotation from "~/components/Annotation.astro";
+import PackageCard from "~/components/PackageCard.astro";
+import CredibilityStrip from "~/components/CredibilityStrip.astro";
+import Marquee from "~/components/Marquee.astro";
+import FAQ from "~/components/FAQ.astro";
+import { PACKAGES } from "~/lib/packages";
+---
+
+<Page
+  title="Small-scale enterprise-grade Azure. Founder-friendly terms."
+  description="Blue Slab Velocity is a senior Azure architect operating as a fractional CTO alternative for seed and Series A startups. Fixed-price packages, no retainers required."
+  path="/"
+>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden border-b border-[color:var(--color-rule)]">
+    <Grid />
+    <div class="container-page relative pt-20 pb-24 md:pt-28 md:pb-32">
+      <Annotation label="// BSV · v0.1 · UK" />
+      <h1 class="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.05] max-w-4xl">
+        Small-scale enterprise-grade Azure.
+        <span class="block text-[color:var(--color-muted)]">Founder-friendly terms.</span>
+      </h1>
+      <p class="mt-7 text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed">
+        A senior Azure architect, packaged. Six fixed-price engagements designed for seed and Series A startups that need a defensible cloud platform before the next funding round.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-3">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] mono text-sm font-medium hover:bg-[color:var(--color-accent-strong)] transition-colors"
+        >
+          Book a discovery call
+          <span aria-hidden="true">→</span>
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center gap-2 px-4 py-2.5 border border-[color:var(--color-rule)] hover:border-[color:var(--color-accent)] mono text-sm transition-colors"
+        >
+          See the six packages
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Marquee />
+
+  <!-- The problem -->
+  <section class="container-page pt-20 pb-16 md:pt-28 grid gap-12 md:grid-cols-12">
+    <div class="md:col-span-4">
+      <Annotation label="// the problem" />
+      <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+        The gap between an MSP and a £200k hire
+      </h2>
+    </div>
+    <div class="md:col-span-7 md:col-start-6 space-y-5 text-[1.0625rem] leading-relaxed">
+      <p>
+        Founders take Azure credits from the Microsoft Founders Hub and burn through them in weeks. A full-time CTO costs £150,000 to £250,000 a year plus equity, which is unsustainable before product-market fit. Large managed service providers want long contracts and assign account managers who do not write code.
+      </p>
+      <p>
+        BSV sits in that gap. A senior Azure architect, packaged into fixed-scope engagements, delivered directly. No account manager, no retainer lock-in, no junior subcontractors hidden behind the brand.
+      </p>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="container-page py-16 md:py-20">
+    <div class="flex items-end justify-between gap-6 mb-8">
+      <div>
+        <Annotation label="// services · 6 SKUs" />
+        <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+          Six packages. Fixed price. No surprise invoices.
+        </h2>
+      </div>
+      <a
+        href="/services"
+        class="hidden sm:inline mono text-sm text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)] transition-colors"
+      >
+        all packages →
+      </a>
+    </div>
+
+    <ul class="grid gap-px bg-[color:var(--color-rule)] border border-[color:var(--color-rule)] sm:grid-cols-2 lg:grid-cols-3">
+      {PACKAGES.map((pkg) => (
+        <li class="contents">
+          <PackageCard pkg={pkg} />
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <CredibilityStrip />
+
+  <!-- Closing CTA -->
+  <FAQ />
+
+  <section class="container-page py-20 md:py-28">
+    <div class="border border-[color:var(--color-rule)] p-8 md:p-12 grid gap-8 md:grid-cols-12 items-center">
+      <div class="md:col-span-7">
+        <Annotation label="// next step" />
+        <h2 class="mt-3 text-2xl md:text-3xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+          A 30-minute call to find out if this is the right fit
+        </h2>
+        <p class="mt-4 text-[color:var(--color-muted)] max-w-xl leading-relaxed">
+          One call, on the record, with the architect who will deliver the work. If it is not a fit, we will tell you and point you somewhere better.
+        </p>
+      </div>
+      <div class="md:col-span-5 md:text-right">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] mono text-sm font-medium hover:bg-[color:var(--color-accent-strong)] transition-colors"
+        >
+          Book a discovery call
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Page>

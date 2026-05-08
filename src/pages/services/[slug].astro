@@ -1,0 +1,63 @@
+---
+import Page from "~/layouts/Page.astro";
+import PackageSpec from "~/components/PackageSpec.astro";
+import { PACKAGES, getPackageBySlug } from "~/lib/packages";
+
+export function getStaticPaths() {
+  return PACKAGES.map((pkg) => ({
+    params: { slug: pkg.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+if (typeof slug !== "string") {
+  return Astro.redirect("/services");
+}
+const pkg = getPackageBySlug(slug);
+if (!pkg) {
+  return Astro.redirect("/services");
+}
+
+const idx = PACKAGES.findIndex((p) => p.slug === pkg.slug);
+const prev = idx > 0 ? PACKAGES[idx - 1] : undefined;
+const next = idx < PACKAGES.length - 1 ? PACKAGES[idx + 1] : undefined;
+---
+
+<Page
+  title={`${pkg.name} (${pkg.code})`}
+  description={pkg.summary}
+  path={`/services/${pkg.slug}`}
+>
+  <div class="container-page pt-12 pb-20">
+    <p class="text-sm">
+      <a href="/services" class="mono text-[color:var(--color-muted)] hover:text-[color:var(--color-accent)]">
+        ← all services
+      </a>
+    </p>
+    <div class="mt-8">
+      <PackageSpec pkg={pkg} />
+    </div>
+
+    <nav
+      aria-label="More packages"
+      class="mt-20 pt-8 border-t border-[color:var(--color-rule)] grid gap-6 sm:grid-cols-2"
+    >
+      {prev ? (
+        <a href={`/services/${prev.slug}`} class="group block">
+          <span class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">← previous</span>
+          <span class="block mt-2 text-[color:var(--color-fg-strong)] group-hover:text-[color:var(--color-accent)] transition-colors">
+            {prev.code} · {prev.name}
+          </span>
+        </a>
+      ) : <span></span>}
+      {next ? (
+        <a href={`/services/${next.slug}`} class="group block sm:text-right">
+          <span class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">next →</span>
+          <span class="block mt-2 text-[color:var(--color-fg-strong)] group-hover:text-[color:var(--color-accent)] transition-colors">
+            {next.code} · {next.name}
+          </span>
+        </a>
+      ) : <span></span>}
+    </nav>
+  </div>
+</Page>

@@ -1,0 +1,54 @@
+---
+title: "The landing zone you don't need yet"
+description: "Reference architectures are written for the company you might become, not the one you are. Here is the smaller landing zone that will get a seed-stage startup to Series A without rework."
+publishedAt: 2026-03-19
+topics: ["landing-zones", "architecture"]
+---
+
+The Microsoft Cloud Adoption Framework Enterprise-Scale landing zone is a remarkable piece of work. It is also, for most seed-stage startups, the wrong artefact. It assumes a sponsor management group with multiple platform subscriptions, a connectivity hub, an identity subscription, a management subscription, and a corp landing zone that is itself a parent for further subscriptions.
+
+A startup of eight people does not need that. It needs a smaller version of it, designed so that the larger version can grow out of it without throwing the first iteration away. The trick is choosing which decisions to make now and which to defer.
+
+## Decisions to make on day one
+
+Three decisions are cheap to make now and expensive to make later.
+
+The first is naming. Pick a convention for resource names, resource group names and subscription names. Write it down as a one-page document in the engineering wiki. The convention matters less than the consistency.
+
+The second is tagging. Pick five tags and enforce them with Azure Policy from week one: `environment`, `owner`, `cost-centre`, `data-classification` and `criticality`. Adding tags retrospectively to a tenant of five hundred resources is a Tuesday afternoon you do not get back.
+
+The third is identity. Microsoft Entra ID with MFA enforced on every account, Conditional Access policies that block legacy authentication, and Privileged Identity Management on Owner and User Access Administrator. None of this costs money on the free tier of Entra. All of it pays back the first time someone tries to phish the founder.
+
+## Decisions to defer
+
+Several decisions look urgent and are not.
+
+A connectivity hub VNet. At seed stage, most startups have one or two workloads and no on-premises footprint. A single hub-spoke pair with a small VNet for shared services is enough. The full Virtual WAN topology can wait until there is a reason to build it.
+
+A dedicated identity subscription. At eight people there is one subscription per environment, not per architectural concern. Splitting identity into its own subscription before there is anything to put in it adds operational tax with no benefit.
+
+A custom Azure Policy initiative. Start with the built-in initiatives Microsoft ships. The CIS Microsoft Azure Foundations Benchmark and Microsoft Cloud Security Benchmark cover ninety percent of what a Series A diligence team will ask about.
+
+## What the small landing zone looks like
+
+A management group hierarchy with three nodes: `bsv-root` at the top, then `platform` and `landing-zones` underneath. Two subscriptions under `landing-zones`, one for production and one for non-production. One subscription under `platform` for shared services and management.
+
+A single hub VNet with Azure Firewall Basic and one peered spoke per environment. Private endpoints on every data service. Diagnostic settings on every resource sent to a single Log Analytics workspace. Defender for Cloud at the standard tier on App Service, Storage, Key Vault and the database services that hold customer data.
+
+GitHub Actions or Azure DevOps as the deployment surface. Terraform or Bicep in a single infrastructure repository, with a remote state file in a storage account with versioning and lifecycle management. A pull-request workflow with `terraform plan` posted as a comment on the PR.
+
+That is the whole platform. It fits in a single architecture diagram. It runs on around four hundred GBP a month before any application workloads land on it.
+
+## How it grows
+
+The point of the small landing zone is that the larger one is its successor, not its replacement.
+
+When the company hires its third backend engineer, split production into per-product subscriptions under the same `landing-zones` management group. When the first regulator asks for an isolation diagram, promote `platform` to a peer of `landing-zones` under a new `corp` management group. When traffic justifies it, swap Azure Firewall Basic for the Standard tier.
+
+Each of those moves is a couple of days of work. None of them require unwinding the original landing zone. The convention, tagging and identity decisions made on day one carry through every step.
+
+## The mistake to avoid
+
+The temptation, especially for the technical founder who has read the Enterprise-Scale documentation, is to build the larger version on day one. It is intellectually satisfying. It is also a way to spend three months not shipping product, to incur Premium-tier costs before there are customers to justify them, and to hand the next engineer a platform they did not build and cannot reason about.
+
+A landing zone exists to make the next decision cheaper. The smallest one that does that is the right one.
