@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo from "~/assets/bsv-logo.png";
+
 interface Props {
   /** Title-only mark, no icon */
   variant?: "full" | "wordmark";
@@ -14,17 +17,16 @@ const { variant = "full", class: className = "" } = Astro.props;
   transition:name="bsv-mark"
 >
   {variant === "full" && (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 32 32"
-      aria-hidden="true"
-      class="shrink-0"
-    >
-      <rect x="4" y="11" width="24" height="10" fill="var(--color-accent)" />
-      <rect x="4" y="11" width="24" height="2" fill="var(--color-accent-strong)" />
-      <rect x="4" y="19" width="24" height="2" fill="var(--color-accent-strong)" />
-    </svg>
+    <Image
+      src={logo}
+      alt=""
+      width={120}
+      height={65}
+      densities={[1, 2]}
+      loading="eager"
+      decoding="sync"
+      class="shrink-0 h-18 w-auto"
+    />
   )}
   <span class="font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
     Blue Slab <span class="text-[color:var(--color-accent)]">Velocity</span>
