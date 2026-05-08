@@ -10,6 +10,12 @@ permissions:
   contents: read
   pull-requests: write
 
+# Opt into the Node.js 24 runtime for JavaScript-based actions ahead of the
+# 2 June 2026 default switch. Suppresses the Node 20 deprecation warning
+# emitted by actions/checkout and actions/setup-node.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
