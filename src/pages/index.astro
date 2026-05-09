@@ -18,7 +18,17 @@ import { PACKAGES } from "~/lib/packages";
   <section class="relative isolate overflow-hidden border-b border-[color:var(--color-rule)]">
     <Grid />
     <div class="container-page relative pt-12 pb-16 sm:pt-20 sm:pb-24 md:pt-28 md:pb-32">
-      <Annotation label="// BSV · v0.1 · UK" />
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+        <Annotation label="// BSV · v0.1 · UK" />
+        <span aria-hidden="true" class="mono text-xs text-[color:var(--color-rule)]">|</span>
+        <time
+          data-bsv-utc
+          aria-label="Current time, UTC"
+          class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)] tabular-nums"
+        >
+          UTC ——:——:——
+        </time>
+      </div>
       <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.1] md:leading-[1.05] max-w-4xl text-balance">
         Small-scale enterprise-grade Azure.
         <span class="block text-[color:var(--color-muted)]">Founder-friendly terms.</span>
