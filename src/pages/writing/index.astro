@@ -14,12 +14,12 @@ const posts = (await getCollection("writing", ({ data }) => !data.draft)).sort(
   description="Notes from the practice. Azure architecture, founders credits, due diligence and the engineering decisions that survive a Series A."
   path="/writing"
 >
-  <section class="container-page pt-16 pb-12 border-b border-[color:var(--color-rule)]">
+  <section class="container-page pt-10 sm:pt-16 pb-10 sm:pb-12 border-b border-[color:var(--color-rule)]">
     <Annotation label="// writing · index" />
-    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.05] max-w-3xl">
+    <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.1] md:leading-[1.05] max-w-3xl text-balance">
       Notes from the practice
     </h1>
-    <p class="mt-5 text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed">
+    <p class="mt-5 text-base sm:text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed text-pretty">
       Short essays on Azure architecture for startups. Written from inside the engagements, not from a marketing brief.
     </p>
   </section>

@@ -124,6 +124,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01", "cv11";
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -131,6 +133,7 @@ body {
   color: var(--color-fg);
   min-height: 100dvh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 ::selection {

@@ -24,12 +24,12 @@ export const PACKAGES: readonly Package[] = [
     slug: "azure-startup-launchpad",
     name: "The Azure Startup Launchpad",
     tagline:
-      "For greenfield pre-revenue or early seed startups getting onto Azure properly.",
+      "For greenfield pre-seed to Series A startups getting onto Azure properly.",
     price: 4500,
     paymentTerms: "50/50",
     delivery: "10 business days",
     summary:
-      "Production-ready landing zone, identity, networking and IaC pipeline for a startup starting clean on Azure.",
+      "Opinionated, production-ready startup-scale Azure Landing Zone designed and built for a small teams of engineers, typically pre-seed to Series A, who don't have a dedicated platform team but beed to get Azure right from the start. ",
     scope: [
       "A small-scale Azure landing zone aligned to the Microsoft Cloud Adoption Framework. Management groups, subscriptions, naming conventions and tagging baked in from day one.",
       "Identity, networking and an Infrastructure-as-Code pipeline you can extend without rework. Hand-over is a working environment plus the documentation a future hire can read in an afternoon.",

@@ -25,10 +25,10 @@ const { variant = "full", class: className = "" } = Astro.props;
       densities={[1, 2]}
       loading="eager"
       decoding="sync"
-      class="shrink-0 h-18 w-auto"
+      class="shrink-0 h-10 sm:h-12 md:h-16 w-auto"
     />
   )}
-  <span class="font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
+  <span class="hidden sm:inline font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
     Blue Slab <span class="text-[color:var(--color-accent)]">Velocity</span>
   </span>
 </a>

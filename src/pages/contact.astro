@@ -12,12 +12,12 @@ const presetPackage = Astro.url.searchParams.get("package") ?? "";
   description="Get in touch with Blue Slab Velocity. Book a 30-minute discovery call, send a direct email, or use the enquiry form."
   path="/contact"
 >
-  <section class="container-page pt-16 pb-12 border-b border-[color:var(--color-rule)]">
+  <section class="container-page pt-10 sm:pt-16 pb-10 sm:pb-12 border-b border-[color:var(--color-rule)]">
     <Annotation label="// contact" />
-    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.05] max-w-3xl">
+    <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.1] md:leading-[1.05] max-w-3xl text-balance">
       Three ways to reach us
     </h1>
-    <p class="mt-5 text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed">
+    <p class="mt-5 text-base sm:text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed text-pretty">
       Pick the channel that suits the conversation. We reply inside one business day.
     </p>
   </section>
@@ -154,13 +154,13 @@ const presetPackage = Astro.url.searchParams.get("package") ?? "";
           </label>
         </div>
 
-        <div class="pt-2 flex flex-wrap items-center gap-4 justify-between">
+        <div class="pt-2 flex flex-col-reverse sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:justify-between">
           <p class="mono text-xs text-[color:var(--color-muted)]">
             By submitting you accept our handling of this enquiry under UK GDPR.
           </p>
           <button
             type="submit"
-            class="inline-flex items-center gap-2 px-4 py-2.5 bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] mono text-sm font-medium hover:bg-[color:var(--color-accent-strong)] transition-colors"
+            class="inline-flex justify-center items-center gap-2 px-4 py-2.5 bg-[color:var(--color-accent)] text-[color:var(--color-accent-fg)] mono text-sm font-medium hover:bg-[color:var(--color-accent-strong)] transition-colors"
           >
             Send enquiry →
           </button>
