@@ -56,27 +56,37 @@ BSV delivers fractional CTO-level Azure strategy and hands-on architecture and d
 
 BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-ended retainers.
 
-### Package 1 —  The Azure Startup Launchpad (£4,500 fixed)
-*For greenfield pre-revenue or early seed startups getting onto Azure properly.*
-- Hero Product
-- Small-scale Azure platform Landing zone 
-- Azure tenant setup and governance baseline (management groups, subscriptions, naming conventions)
-- Identity and access foundation (Entra ID, RBAC, Conditional Access)
-- Core networking (hub-spoke or single-VNet depending on scale)
-- IaC (Terraform/Bicep) and GitHub Actions pipeline scaffold
-- Cost management dashboards and budget alerts
+### Package 1 —  The Startup Launchpad (£4,500 fixed)
+*The Launchpad Engine deployment covers greenfield Azure tenant setup for single-workload startups, typically pre-seed/seed stage no existing Azure estate, no hybrid connectivity requirements.*
+- Deployed management group hierarchy
+- Deployed prod + nonprod landing zone
+- RBAC Baseline (Entra ID Groups + Role Assignments)
+- Core networking
+- Policy Assignments (security, tagging)
+- Defender for Cloud + Log Analytics Baseline
+- Cost management budgets + tag attributions
+- IaC code (Terraform or Bicep)
+- GitHub Actions CI/CD pipeline scaffold
+- Documentation (Resource Inventory, Solution Design)
 - Handover documentation + 2-week async Q&A window
 - **Delivery: 10 business days**
 
 ---
 
-### Package 2 — AI-Ready Platform (£9,500 fixed)
-*For startups building AI/Agentic AI features who need a proper Azure data foundation.*
-- Azure OpenAI or Microsoft Foundry integration scaffold
-- Azure AI Search setup for RAG workloads (if applicable)
-- Security baseline for data platform (private endpoints, managed identities)
-- Documentation and runbook
-- **Delivery: 20 business days**
+### Package 2 — The AI-Ready Platform (£11,500 fixed)
+*For startups building AI-powered products who need a proper Azure foundation - not just an API key and a prayer.*
+- Azure AI Foundry Hub and Project — the governance and workload layer for all AI development
+- Azure OpenAI deployment — model, version, and capacity configured for your expected load
+- Azure Foundry Agent Service — the managed agent runtime, wired to your knowledge base and ready for your dev team
+- Azure AI Search — RAG-ready knowledge index, configured for your document types and retrieval pattern
+- Private networking throughout — private endpoints on all PaaS services, no public exposure
+- Managed identity authentication across every service-to-service connection
+- Azure Monitor coverage — token consumption, agent run latency and failure rate, cost alerts
+- Microsoft Agent Framework starter project — working code in your repo that your team can build on from Day 1
+- Agent evaluation baseline — groundedness and relevance scoring wired and verified
+- IaC in your GitHub repo (Terraform) with CI/CD pipeline for model and agent updates
+- Full handover pack: architecture decisions, operational runbook, cost management guide
+- **Delivery: 25 business days**
 
 ---
 
