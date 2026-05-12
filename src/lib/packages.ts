@@ -155,7 +155,7 @@ export const PACKAGES: readonly Package[] = [
       "Day-to-day people management of an internal engineering team",
     ],
   },
-  {
+  /**{
     code: "BSV-PKG-04",
     slug: "architecture-review-and-roadmap",
     name: "The Architecture Review and Roadmap",
@@ -241,7 +241,7 @@ export const PACKAGES: readonly Package[] = [
       "Long-term FinOps operating model implementation",
       "Negotiation of an Enterprise Agreement on the customer's behalf",
     ],
-  },
+  },*/
 ] as const;
 
 export function getPackageBySlug(slug: string): Package | undefined {

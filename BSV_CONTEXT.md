@@ -35,7 +35,7 @@ BSV delivers fractional CTO-level Azure strategy and hands-on architecture and d
 
 | Attribute | Detail |
 |---|---|
-| **Funding stage** | Seed (£500K–£3M raised) to Series A (£3M–£15M raised), pre-revenue startups |
+| **Funding stage** | Seed (£500K–£3M raised) to Series A (£3M–£15M raised), pre-revenue startups, self funded |
 | **Headcount** | 1–30 people |
 | **Tech maturity** | Has a dev team (1–5 engineers) but no dedicated cloud architect or CTO |
 | **Cloud posture** | On Azure or evaluating Azure; may have inherited a messy setup from a previous agency |
@@ -90,18 +90,7 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 
 ---
 
-### Package 3 — The Architecture Review & Roadmap (£3,200 fixed)
-*For startups with an existing Azure environment that needs a hard look.*
-- Full Azure Well-Architected Framework assessment (Reliability, Security, Cost Optimisation, Operational Excellence, Performance Optimisation)
-- Azure Advisor + Defender for Cloud findings triage
-- Written findings report with severity ratings
-- Prioritised 90-day remediation roadmap
-- 90-minute debrief call with founder/CTO
-- **Delivery: 7 business days**
-
----
-
-### Package 4 — Fractional CTO Retainer (£3,500/month, 3-month minimum)
+### Package 3 — The Fractional CTO Retainer (£3,500/month, 3-month minimum)
 *For founders who want ongoing strategic cloud cover without hiring full-time.*
 - Up to 2 days/month hands-on technical work (architecture, code review, deployment)
 - Async Slack/Teams availability (response within 4 business hours)
@@ -109,6 +98,17 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 - Attendance at 1 board/investor meeting per quarter (remote)
 - First right of refusal on any follow-on project work
 - **Rolling monthly after 3-month minimum, 30-day notice to exit**
+
+---
+
+### Package 4 — The Architecture Review & Roadmap (£3,200 fixed)
+*For startups with an existing Azure environment that needs a hard look.*
+- Full Azure Well-Architected Framework assessment (Reliability, Security, Cost Optimisation, Operational Excellence, Performance Optimisation)
+- Azure Advisor + Defender for Cloud findings triage
+- Written findings report with severity ratings
+- Prioritised 90-day remediation roadmap
+- 90-minute debrief call with founder/CTO
+- **Delivery: 7 business days**
 
 ---
 
