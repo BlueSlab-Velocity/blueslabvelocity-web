@@ -33,8 +33,8 @@ export const PACKAGES: readonly Package[] = [
     summary:
       "Opinionated, production-ready Azure Landing Zone for Azure tenants with startup scale workloads, typically with no existing Azure estate. Multi-subscription, policy-governed foundation that passes SOC2/ISO27001.",
     scope: [
-      "A startup-scale Azure landing zone aligned to Microsoft's ES-CAF. Management groups, subscriptions, naming conventions and tagging baked in from day one.",
-      "Identity, networking and an Infrastructure-as-Code pipeline you can extend without rework. Hand-over is a working environment plus the documentation a future hire can read in an afternoon.",
+      "A startup-scale Azure landing zone, ALZ-aligned and deployable from day one. Management groups, subscriptions, naming conventions, RBAC, and tagging are in from the start — not retrofitted later.",
+      "You get identity, networking, a security baseline, and an IaC pipeline structured to extend as you grow. Hand-over is a working environment plus documentation a future hire can read in an afternoon.",
     ],
     deliverables: [
       "Deployed management group hierarchy",
