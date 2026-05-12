@@ -14,6 +14,8 @@ export interface Package {
   summary: string;
   /** Two short paragraphs used on the package detail page */
   scope: string[];
+  /** Optional grouped categories rendered on the detail page after scope */
+  categories?: { title: string; items: string[] }[];
   deliverables: string[];
   outOfScope: string[];
 }
@@ -123,15 +125,46 @@ export const PACKAGES: readonly Package[] = [
   {
     code: "BSV-PKG-04",
     slug: "fractional-cto-retainer",
-    name: "Fractional CTO Retainer",
+    name: "The Fractional CTO",
     tagline:
-      "For founders who want ongoing strategic cloud cover without hiring full-time.",
+      "Senior technical leadership at a fraction of the full-time cost. For founders who want ongoing strategic Azure cover without hiring full-time.",
     price: 3500,
     priceSuffix: "/month",
     paymentTerms: "monthly",
     delivery: "Rolling monthly after a 3-month minimum",
     summary:
-      "Up to two days a month of senior hands-on time, async availability inside business hours, and a monthly strategy session.",
+      "Up to two days a week of senior hands-on time, async availability inside business hours, to work on your business needs. These typically fall into the following categories: ",
+    categories: [
+      {
+        title: "Strategic work",
+        items: [
+          "Technology roadmap: aligning technical priorities with business goals through business-first engineering",
+          "Architecture decisions: making choices that scale without over-engineering",
+          "Build vs. buy analysis: when to use existing solutions vs. building custom",
+          "Technical due diligence: preparing for Series A or B fundraising rounds",
+          "Budgeting: infrastructure costs, team sizing, tool selection",
+          "Vendor evaluation: choosing technology partners and platforms",
+        ],
+      },
+      {
+        title: "Team leadership",
+        items: [
+          "Hiring: defining roles, sourcing candidates, running technical interviews",
+          "Team structure: organising engineers into effective teams",
+          "Mentoring: developing your engineering leads and managers",
+        ],
+      },
+      {
+        title: "Operational work",
+        items: [
+          "Sprint planning: ensuring the team is working on the right things",
+          "Architecture reviews: catching problems before they ship",
+          "Code reviews: sometimes, especially for critical systems",
+          "Security: ensuring appropriate security practices",
+          "Technical debt: prioritising and managing accumulated shortcuts",
+        ],
+      },
+    ],
     scope: [
       "A senior Azure architect on call for the decisions that matter: review of architecture choices, sanity checks on a vendor proposal, board prep, hiring a first cloud engineer.",
       "The retainer is rolling after the initial three months. Thirty days notice to exit. No long lock-in.",
