@@ -26,7 +26,7 @@ export const PACKAGES: readonly Package[] = [
     slug: "azure-startup-launchpad",
     name: "The Startup Launchpad",
     tagline:
-      "The Launchpad Engine deployment covers greenfield Azure tenant setup for single-workload startups, typically pre-seed/seed stage no existing Azure estate, no hybrid connectivity requirements.",
+      "The Launchpad Engine deployment covers greenfield Azure tenant setup for single-workload startups, typically pre-seed to Series A stage no existing Azure estate, no hybrid connectivity requirements.",
     price: 4500,
     paymentTerms: "50/50",
     delivery: "10 business days",
