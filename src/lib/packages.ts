@@ -31,7 +31,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "10 business days",
     summary:
-      "Opinionated, production-ready Azure Landing Zone for greenfield Azure tenants for single workload startup, typically pre-seed or seed-stage, no existing Azure estate, no hybrid connectivity requirements. ",
+      "Opinionated, production-ready Azure Landing Zone for Azure tenants with startup scale workloads, typically with no existing Azure estate. Multi-subscription, policy-governed foundation that passes SOC2/ISO27001.",
     scope: [
       "A startup-scale Azure landing zone aligned to Microsoft's ES-CAF. Management groups, subscriptions, naming conventions and tagging baked in from day one.",
       "Identity, networking and an Infrastructure-as-Code pipeline you can extend without rework. Hand-over is a working environment plus the documentation a future hire can read in an afternoon.",
@@ -70,7 +70,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "25 business days",
     summary:
-      "Microsoft Foundry and Azure OpenAI foundations, RAG-ready search, and an AI-ready platform secured with private endpoints and managed identities. Secure, observable, production-ready AI platform on Azure.",
+      "Microsoft Foundry foundations, RAG-ready search, and Agentic AI-ready platform secured with compliant networks, private endpoints and managed identities. Secure, observable, production-ready AI platform on Azure.",
     scope: [
       "Most startups building with AI start the same way: Azure OpenAI API key in a .env file, no private networking, no audit trail, no cost controls, and a single engineer who knows how it all fits together. That is fine for a prototype. It is not fine when you are onboarding regulated customers, raising a Series A, or hitting production load.",
       "This package deploys a secure, observable, production-ready AI platform on Azure — with an agentic AI foundation built on Microsoft Foundry Agent Service, so your dev team can build and ship agents without starting from scratch.",
