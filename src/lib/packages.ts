@@ -70,7 +70,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "25 business days",
     summary:
-      "Microsoft Foundry and Azure OpenAI foundations, RAG-ready search, and an AI-ready platform secured with private endpoints and managed identities.",
+      "Microsoft Foundry and Azure OpenAI foundations, RAG-ready search, and an AI-ready platform secured with private endpoints and managed identities. Secure, observable, production-ready AI platform on Azure.",
     scope: [
       "Most startups building with AI start the same way: Azure OpenAI API key in a .env file, no private networking, no audit trail, no cost controls, and a single engineer who knows how it all fits together. That is fine for a prototype. It is not fine when you are onboarding regulated customers, raising a Series A, or hitting production load.",
       "This package deploys a secure, observable, production-ready AI platform on Azure — with an agentic AI foundation built on Microsoft Foundry Agent Service, so your dev team can build and ship agents without starting from scratch.",
@@ -96,34 +96,6 @@ export const PACKAGES: readonly Package[] = [
   },
   {
     code: "BSV-PKG-03",
-    slug: "architecture-review-and-roadmap",
-    name: "The Architecture Review and Roadmap",
-    tagline:
-      "For startups with an existing Azure environment that needs a hard look.",
-    price: 3200,
-    paymentTerms: "50/50",
-    delivery: "7 business days",
-    summary:
-      "A full Well-Architected Framework assessment, a written findings report with severities, and a 90-day remediation plan.",
-    scope: [
-      "An honest read of what is in your tenant today against the five Well-Architected pillars. We sit with the Advisor and Defender for Cloud findings and separate noise from signal.",
-      "You get a written report you can hand to your board or your next CTO hire, and a 90-minute debrief that turns it into a plan.",
-    ],
-    deliverables: [
-      "Well-Architected Framework assessment across Reliability, Security, Cost Optimisation, Operational Excellence and Performance Efficiency",
-      "Azure Advisor and Defender for Cloud findings triage",
-      "Written findings report with severity ratings",
-      "Prioritised 90-day remediation roadmap",
-      "90-minute debrief call with founder or CTO",
-    ],
-    outOfScope: [
-      "Implementation of the remediation items (separate engagement)",
-      "Application-layer code review",
-      "Penetration testing",
-    ],
-  },
-  {
-    code: "BSV-PKG-04",
     slug: "fractional-cto-retainer",
     name: "The Fractional CTO",
     tagline:
@@ -131,9 +103,9 @@ export const PACKAGES: readonly Package[] = [
     price: 3500,
     priceSuffix: "/month",
     paymentTerms: "monthly",
-    delivery: "Rolling monthly after a 3-month minimum",
+    delivery: "Rolling after a 3-month minimum",
     summary:
-      "Up to two days a week of senior hands-on time, async availability inside business hours, to work on your business needs. These typically fall into the following categories: ",
+      "Up to two days a week of senior hands-on time, async availability inside business hours, embedded within your team and working on the decisions and delivery that matter. Architecture or hands-on engineering.",
     categories: [
       {
         title: "Strategic work",
@@ -168,6 +140,7 @@ export const PACKAGES: readonly Package[] = [
     scope: [
       "A senior Azure architect on call for the decisions that matter: review of architecture choices, sanity checks on a vendor proposal, board prep, hiring a first cloud engineer.",
       "The retainer is rolling after the initial three months. Thirty days notice to exit. No long lock-in.",
+      "The work varies based on your specific needs, but typically falls into three categories: "
     ],
     deliverables: [
       "Up to 2 days per month of hands-on technical work (architecture, code review, deployment)",
@@ -183,16 +156,44 @@ export const PACKAGES: readonly Package[] = [
     ],
   },
   {
+    code: "BSV-PKG-04",
+    slug: "architecture-review-and-roadmap",
+    name: "The Architecture Review and Roadmap",
+    tagline:
+      "For startups with an existing Azure environment that needs a hard look.",
+    price: 3200,
+    paymentTerms: "50/50",
+    delivery: "7 business days",
+    summary:
+      "A full Well-Architected Framework assessment, a written findings report with severities, and a 90-day remediation plan. For brownfielfd Azure tenants that need a hard look and a clear path forward.",
+    scope: [
+      "An honest read of what is in your tenant today against the five Well-Architected pillars. We sit with the Advisor and Defender for Cloud findings and separate noise from signal.",
+      "You get a written report you can hand to your board or your next CTO hire, and a 90-minute debrief that turns it into a plan.",
+    ],
+    deliverables: [
+      "Well-Architected Framework assessment across Reliability, Security, Cost Optimisation, Operational Excellence and Performance Efficiency",
+      "Azure Advisor and Defender for Cloud findings triage",
+      "Written findings report with severity ratings",
+      "Prioritised 90-day remediation roadmap",
+      "90-minute debrief call with founder or CTO",
+    ],
+    outOfScope: [
+      "Implementation of the remediation items (separate engagement)",
+      "Application-layer code review",
+      "Penetration testing",
+    ],
+  },
+  {
     code: "BSV-PKG-05",
     slug: "security-and-compliance-sprint",
-    name: "Security and Compliance Sprint",
+    name: "The Security and Compliance Sprint",
     tagline:
       "For startups approaching ISO 27001, SOC 2, or a regulated customer security review.",
     price: 6800,
     paymentTerms: "50/50",
     delivery: "15 business days",
     summary:
-      "Defender for Cloud hardening to a Secure Score of 80+, Sentinel or Defender XDR, MFA and PIM, and an evidence pack for auditors.",
+      "This focused sprint aligns your tenant architecture with global security frameworks—ensuring your identity, data, and networking configurations are fully prepared fordeep-dive customer audits.",
     scope: [
       "A focused two-week push to get a tenant from default to defensible. The work is scoped against a real auditor's checklist, not a theoretical one.",
       "You finish with controls in place, evidence captured and a Secure Score that holds up to scrutiny.",
@@ -221,7 +222,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "8 business days",
     summary:
-      "Founders credits preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board.",
+      "Manage your financial runway and secure Azure cloud cost savings. Founders credits preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board.",
     scope: [
       "An end-to-end pass over what you are spending and why. Idle resources are retired, compute and storage are right-sized, and Reserved Instance or Savings Plan options are quantified.",
       "You leave with a tagging strategy, a monthly forecast versus actuals dashboard and a clear path to extend founders credits as far as they will go.",

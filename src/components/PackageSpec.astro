@@ -60,28 +60,27 @@ const paymentLabel =
         <div class="mt-3 space-y-4 text-[1.0625rem] leading-relaxed">
           {pkg.scope.map((para) => <p>{para}</p>)}
         </div>
-      </div>
 
-      {pkg.categories && (
-        <div class="pt-6 border-t border-[color:var(--color-rule)] space-y-8">
-          {pkg.categories.map((group) => (
-            <div>
-              <Annotation label={`// ${group.title.toLowerCase()}`} />
-              <h3 class="mt-3 text-base font-semibold text-[color:var(--color-fg-strong)]">
-                {group.title}
-              </h3>
-              <ul class="mt-3 space-y-2 text-[color:var(--color-fg)]">
-                {group.items.map((item) => (
-                  <li class="flex gap-3">
-                    <span aria-hidden="true" class="mono text-[color:var(--color-muted)] shrink-0">·</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
+        {pkg.categories && (
+          <div class="mt-8 space-y-7">
+            {pkg.categories.map((group) => (
+              <div>
+                <h3 class="mono text-xs uppercase tracking-wider text-[color:var(--color-muted)]">
+                  // {group.title.toLowerCase()}
+                </h3>
+                <ul class="mt-3 space-y-2 text-[color:var(--color-fg)]">
+                  {group.items.map((item) => (
+                    <li class="flex gap-3">
+                      <span aria-hidden="true" class="mono text-[color:var(--color-muted)] shrink-0">·</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
       <div class="pt-6 border-t border-[color:var(--color-rule)]">
         <Annotation label="// deliverables" />
