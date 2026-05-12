@@ -1,29 +1,35 @@
-/* BSV live UTC clock.
+/* BSV live London clock.
  * Mounts on every page (works with Astro View Transitions).
- * Format: "UTC HH:MM:SS · YYYY-MM-DD" (24h, ISO date).
+ * Format: "GMT HH:MM:SS · YYYY-MM-DD" or "BST HH:MM:SS · YYYY-MM-DD"
+ * — auto-switches with Europe/London DST. 24h, ISO date.
  * Ticks once a second, re-aligned to wall clock to avoid drift.
  */
 (function () {
   var timer = null;
 
-  function pad(n) {
-    return n < 10 ? "0" + n : "" + n;
-  }
+  // Pull localised parts in one call so date/time/zone all match the same instant.
+  var fmt = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/London",
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short",
+  });
 
   function format(d) {
+    var parts = fmt.formatToParts(d);
+    var p = {};
+    for (var i = 0; i < parts.length; i++) p[parts[i].type] = parts[i].value;
+    var zone = p.timeZoneName === "GMT+1" ? "BST" : (p.timeZoneName || "GMT");
     return (
-      "UTC " +
-      pad(d.getUTCHours()) +
-      ":" +
-      pad(d.getUTCMinutes()) +
-      ":" +
-      pad(d.getUTCSeconds()) +
+      zone + " " +
+      p.hour + ":" + p.minute + ":" + p.second +
       " \u00b7 " +
-      d.getUTCFullYear() +
-      "-" +
-      pad(d.getUTCMonth() + 1) +
-      "-" +
-      pad(d.getUTCDate())
+      p.year + "-" + p.month + "-" + p.day
     );
   }
 
