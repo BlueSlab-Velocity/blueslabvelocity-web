@@ -101,6 +101,42 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 
 ---
 
+### Package 4 — The Architecture Review & Roadmap (£3,200 fixed)
+*For startups with an existing Azure environment that needs a hard look.*
+- Full Azure Well-Architected Framework assessment (Reliability, Security, Cost Optimisation, Operational Excellence, Performance Optimisation)
+- Azure Advisor + Defender for Cloud findings triage
+- Written findings report with severity ratings
+- Prioritised 90-day remediation roadmap
+- 90-minute debrief call with founder/CTO
+- **Delivery: 7 business days**
+
+---
+
+### Package 5 — Security & Compliance Sprint (£6,800 fixed)
+*For startups approaching ISO 27001, SOC 2, or a regulated customer security review.*
+- Defender for Cloud hardening (CSPM posture to Secure Score 80+)
+- Network security group audit and remediation
+- Key Vault secrets management implementation
+- Microsoft Sentinel basic SIEM setup (or Defender XDR where appropriate)
+- Entra ID MFA enforcement and Privileged Identity Management (PIM) basics
+- Evidence pack for auditors (policy assignments, log exports, access reviews)
+- **Delivery: 15 business days**
+
+---
+
+## Package 6 — The Cost Management Rescue (£2,800 fixed)
+*For startups with a runaway Azure bill or preparing for board scrutiny of cloud spend.*
+- Optimise and preserve Azure founders credits consumption, managing financial runway.
+- Full cost analysis across all subscriptions (Cost Management + Billing)
+- Identification and elimination of idle/orphaned resources
+- Right-sizing recommendations for compute and storage
+- Reserved Instance or Savings Plan analysis and purchase advisory
+- Tagging strategy implementation for cost attribution
+- Monthly spend forecast vs actuals dashboard (Power BI or Azure Workbooks)
+- **Delivery: 8 business days**
+
+---
+
 ## 5. Pricing Philosophy
 
 - All packages are **fixed price** — no surprise invoices

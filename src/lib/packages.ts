@@ -26,14 +26,14 @@ export const PACKAGES: readonly Package[] = [
     slug: "azure-startup-launchpad",
     name: "The Startup Launchpad",
     tagline:
-      "The Launchpad Engine deployment covers greenfield Azure tenant setup for single-workload startups, typically pre-seed to Series A stage no existing Azure estate, no hybrid connectivity requirements.",
+    "A startup-scale Azure landing zone, ALZ-aligned and deployable from day one. Management groups, subscriptions, naming conventions, RBAC, and tagging are in from the start — not retrofitted later.",  
     price: 4500,
     paymentTerms: "50/50",
     delivery: "10 business days",
     summary:
       "Opinionated, production-ready Azure Landing Zone for Azure tenants with startup scale workloads, typically with no existing Azure estate. Multi-subscription, policy-governed foundation that passes SOC2/ISO27001.",
     scope: [
-      "A startup-scale Azure landing zone, ALZ-aligned and deployable from day one. Management groups, subscriptions, naming conventions, RBAC, and tagging are in from the start — not retrofitted later.",
+      "The Launchpad Engine deployment covers greenfield Azure tenant setup for single-workload startups, typically pre-seed to Series A stage with no existing Azure estate, no hybrid connectivity requirements.",
       "You get identity, networking, a security baseline, and an IaC pipeline structured to extend as you grow. Hand-over is a working environment plus documentation a future hire can read in an afternoon.",
     ],
     deliverables: [
@@ -44,10 +44,8 @@ export const PACKAGES: readonly Package[] = [
       "Policy Assignments (security, tagging)",
       "Defender for Cloud + Log Analytics Baseline",
       "Cost management budgets + tag attributions",
-      "IaC code (Terraform or Bicep)",
-      "GitHub Actions CI/CD pipeline scaffold",
-      "Documentation (Resource Inventory, Solution Design)",
-      "Handover documentation + 2-week async Q&A window",
+      "IaC code (Terraform or Bicep) and GitHub Actions CI/CD pipeline scaffold",
+      "Handover documentation (Resource Inventory, Solution Architecture) + 2-week async Q&A window",
     ],
     outOfScope: [
       "Application code, container images,, CI for application repositories, product-side architecture, or workload deployments",
@@ -138,7 +136,7 @@ export const PACKAGES: readonly Package[] = [
       },
     ],
     scope: [
-      "A senior Azure architect on call for the decisions that matter: review of architecture choices, sanity checks on a vendor proposal, board prep, hiring a first cloud engineer.",
+      "A senior architect on call for the decisions that matter: review of architecture choices, sanity checks on a vendor proposal, board prep, hiring cloud engineers.",
       "The retainer is rolling after the initial three months. Thirty days notice to exit. No long lock-in.",
       "The work varies based on your specific needs, but typically falls into three categories: "
     ],
@@ -155,7 +153,7 @@ export const PACKAGES: readonly Package[] = [
       "Day-to-day people management of an internal engineering team",
     ],
   },
-  /**{
+  {
     code: "BSV-PKG-04",
     slug: "architecture-review-and-roadmap",
     name: "The Architecture Review and Roadmap",
@@ -172,7 +170,6 @@ export const PACKAGES: readonly Package[] = [
     ],
     deliverables: [
       "Well-Architected Framework assessment across Reliability, Security, Cost Optimisation, Operational Excellence and Performance Efficiency",
-      "Azure Advisor and Defender for Cloud findings triage",
       "Written findings report with severity ratings",
       "Prioritised 90-day remediation roadmap",
       "90-minute debrief call with founder or CTO",
@@ -184,6 +181,72 @@ export const PACKAGES: readonly Package[] = [
     ],
   },
   {
+    code: "BSV-PKG-05",
+    slug: "resilience-audit-and-hardening",
+    name: "The Resilience Shield Sprint",
+    tagline:
+      "For startups operating in highly regulated industries, and approaching ISO 27001, SOC 2, or a regulated customer security review.",
+    price: 7000,
+    paymentTerms: "50/50",
+    delivery: "15 business days",
+    summary:
+      "This focused sprint aligns your tenant architecture with global security frameworks—ensuring your identity, data, and networking configurations are fully prepared fordeep-dive customer audits.",
+    scope: [
+      "The Resilience Shield is a high-impact, 2-week engagement designed to harden your Azure environment against the strict regulatory frameworks (DORA, ISO 27001, and SOC2).",
+      "A focused two-week push to get a tenant from default to defensible. The work is scoped against a real auditor's checklist, not a theoretical one.",
+      "You finish with controls in place, evidence captured and a Secure Score that holds up to scrutiny.",
+    ],
+    deliverables: [
+      "Defender for Cloud hardening to a target Secure Score of 75 or above",
+      "Network security group audit and remediation",
+      "Key Vault secrets management implementation",
+      "Microsoft Sentinel basic SIEM setup, or Defender XDR where appropriate",
+      "Microsoft Entra ID MFA enforcement and Privileged Identity Management basics",
+      "Evidence pack for auditors: policy assignments, log exports, access reviews",
+      "Compliance-as-Code implementation: Terraform/Bicep code with Azure Policy initiatives and custom policies to enforce regulatory requirements delivered to your repo.",
+      "Report and remediation recommendations of your current state against DORA, ISO 27001, or SOC2 requirements.",
+    ],
+    outOfScope: [
+      "Full ISO 27001 or SOC 2 audit preparation outside the technical scope",
+      "Third-party penetration testing",
+      "Application code SAST or DAST tooling integration",
+      "Official Certification: We prepare you for the audit and map the controls, but the final ISO/SOC2 certification must be granted by an independent accredited auditor.",
+      "Application-Level Code Fixes: While we secure the infrastructure, remediating vulnerabilities within your proprietary application code is the responsibility of your dev team",
+      "24/7 Security Operations (SOC): We build the shield, but we do not provide 24/7 monitoring or services",
+      "Legal Advice: We provide technical implementation based on regulatory requirements; we do not provide legal interpretations of DORA or HealthTech laws.",
+    ],
+  },
+  {
+    code: "BSV-PKG-06",
+    slug: "cost-management-rescue",
+    name: "The Cost Management Rescue",
+    tagline:
+      "For startups with a runaway Azure bill or preparing for board scrutiny of cloud spend.",
+    price: 2800,
+    paymentTerms: "50/50",
+    delivery: "8 business days",
+    summary:
+      "Manage your financial runway and secure Azure cloud cost savings. Founders credits preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board.",
+    scope: [
+      "An end-to-end pass over what you are spending and why. Idle resources are retired, compute and storage are right-sized, and Reserved Instance or Savings Plan options are quantified.",
+      "You leave with a tagging strategy and a clear path to extend founders credits as far as they will go.",
+    ],
+    deliverables: [
+      "Optimise and preserve Azure founders credits, protecting financial runway",
+      "Full cost analysis across all subscriptions (Cost Management and Billing)",
+      "Identification and elimination of idle or orphaned resources",
+      "Right-sizing recommendations for compute and storage",
+      "Reserved Instance or Savings Plan analysis and purchase advisory",
+      "Tagging strategy implementation for cost attribution",
+      "Monthly spend forecast versus actuals dashboard (Power BI or Azure Workbooks)",
+    ],
+    outOfScope: [
+      "Application refactoring for cost (separate engagement)",
+      "Long-term FinOps operating model implementation",
+      "Negotiation of an Enterprise Agreement on the customer's behalf",
+    ],
+  },
+  /**{
     code: "BSV-PKG-05",
     slug: "security-and-compliance-sprint",
     name: "The Security and Compliance Sprint",
@@ -225,7 +288,7 @@ export const PACKAGES: readonly Package[] = [
       "Manage your financial runway and secure Azure cloud cost savings. Founders credits preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board.",
     scope: [
       "An end-to-end pass over what you are spending and why. Idle resources are retired, compute and storage are right-sized, and Reserved Instance or Savings Plan options are quantified.",
-      "You leave with a tagging strategy, a monthly forecast versus actuals dashboard and a clear path to extend founders credits as far as they will go.",
+      "You leave with a tagging strategy and a clear path to extend founders credits as far as they will go.",
     ],
     deliverables: [
       "Optimise and preserve Azure founders credits, protecting financial runway",
