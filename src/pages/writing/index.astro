@@ -15,7 +15,7 @@ const posts = (await getCollection("writing", ({ data }) => !data.draft)).sort(
   path="/writing"
 >
   <section class="container-page pt-10 sm:pt-16 pb-10 sm:pb-12 border-b border-[color:var(--color-rule)]">
-    <Annotation label="// writing · index" />
+    <Annotation label="writing · index" />
     <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.1] md:leading-[1.05] max-w-3xl text-balance">
       Notes from the practice
     </h1>
@@ -57,7 +57,7 @@ const posts = (await getCollection("writing", ({ data }) => !data.draft)).sort(
     </ol>
 
     <p class="mt-8 mono text-xs text-[color:var(--color-muted)]">
-      // <a href="/rss.xml" class="hover:text-[color:var(--color-accent)]">rss feed</a>
+      <a href="/rss.xml" class="hover:text-[color:var(--color-accent)]">rss feed</a>
     </p>
   </section>
 </Page>
