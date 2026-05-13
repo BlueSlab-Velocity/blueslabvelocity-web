@@ -97,7 +97,7 @@ export const PACKAGES: readonly Package[] = [
   {
     code: "BSV-PKG-03",
     slug: "fractional-cto-retainer",
-    name: "The Fractional CTO",
+    name: "The Fractional CTO of Infrastructure",
     tagline:
       "Senior technical leadership at a fraction of the full-time cost. For founders who want ongoing strategic Azure cover without hiring full-time.",
     price: 3500,
