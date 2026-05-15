@@ -7,18 +7,20 @@
 ## 1. Business Identity
 
 **Company name:** Blue Slab Velocity (BSV)
-**Trading status:** Solo consultancy — single principal, no employees
-**Founder persona:** NSV (SC) Cleared Certified Senior Azure architect with enterprise background in Azure platform architecture, DevSecops, Platform engineering, IaC (Terraform/Bicep), containerisation, operating as a fractional CTO and Azure cloud strategy partner for early-stage startups
+**Trading status:** cloud consultancy — single principal, no employees yet
+**Founder persona:** NSV (SC) Cleared Certified Senior Azure architect with enterprise scale background in Azure platform architecture, DevSecops, Platform engineering, IaC (Terraform/Bicep), containerisation, fractional CTO of infrastructure and Azure cloud strategy partner for early-stage startups
 **Tagline (working):** *Small scale Enterprise-grade Azure. Founder-friendly terms.*
 **Location:** United Kingdom (primary market: UK + Western Europe), open to international markets (Africa)
 **Website:** [TBD — in development]
-**Brand tone:** Confident, direct, jargon-lite. Sounds like a veteran azure platform engineer who also understands a P&L — not a sales deck.
+**Brand tone:** Confident, direct, jargon-lite. Sounds like a veteran azure platform engineer and architect who also understands a P&L — not a sales deck.
 
 ---
 
 ## 2. The Problem We Solve
 
-For many seed-stage and Series A startups who receive Azure Founders credits through the Microsoft Founder's hub, they burn through those credits too fast because they haven't implement the mechanisms (likle VM rightsizing, deleting unused resources if brownfield, using Azure reserved isntance where appropriate, etc) to help preserve credits and manage costs/financlai runway. Also,hiring a full-time CTO or senior specialists costs £150,000–£250,000 annually plus equity. That is unsustainable before product-market fit.Large managed service providers (MSPs) lock founders into long-term contracts with slow procurement cycles and account managers who don't write code.
+For many pre-seed, seed-stage and Series A startups, a full-time CTO of infrastructure or an experienced senior architect costs £120,000 to £250,000 a year plus equity — unsustainable before product-market fit for an early stage start-up. Large managed service providers want long contracts and assign account managers who aren't technical. Meanwhile, whether its burning through Microsoft Founder's Hub credits you've received, bleeding hard-won venture capital or depleting your own capital on unoptimised Azure workloads, your financial runway can vanish in weeks without the right cost controls in place. 
+
+BSV sits in that gap. A senior Azure architect, packaged into fixed-scope engagements, delivered directly. No account manager, no retainer lock-in, no junior subcontractors hidden behind the brand.
 
 **BSV sits in the gap:**
 - Too technical for a generalist agency
