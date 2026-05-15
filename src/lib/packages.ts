@@ -136,6 +136,7 @@ export const PACKAGES: readonly Package[] = [
       },
     ],
     scope: [
+      "A fractional CTO is an experienced technology leader who works with your company part-time, typically 1-3 days per week. You get senior technical leadership, strategic guidance, and team development without hiring a full-time executive.",
       "A senior architect on call for the decisions that matter: review of architecture choices, sanity checks on a vendor proposal, board prep, hiring cloud engineers.",
       "The retainer is rolling after the initial three months. Thirty days notice to exit. No long lock-in.",
       "The work varies based on your specific needs, but typically falls into three categories: "
@@ -232,7 +233,7 @@ export const PACKAGES: readonly Package[] = [
       "You leave with a tagging strategy and a clear path to extend founders credits as far as they will go.",
     ],
     deliverables: [
-      "xtend your financial runway by optimising Azure consumption of your Azure Founders Hub credits, VC or self-funded capital.",
+      "Extend your financial runway by optimising Azure consumption of your Azure Founders Hub credits, VC or self-funded capital.",
       "Full cost analysis across all subscriptions (Cost Management and Billing)",
       "Identification and elimination of idle or orphaned resources",
       "Right-sizing recommendations for compute and storage",
