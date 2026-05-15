@@ -10,7 +10,7 @@
 **Trading status:** cloud consultancy — single principal, no employees yet
 **Founder persona:** NSV (SC) Cleared Certified Senior Azure architect with enterprise scale background in Azure platform architecture, DevSecops, Platform engineering, IaC (Terraform/Bicep), containerisation, fractional CTO of infrastructure and Azure cloud strategy partner for early-stage startups
 **Tagline (working):** *Small scale Enterprise-grade Azure. Founder-friendly terms.*
-**Location:** United Kingdom (primary market: UK + Western Europe), open to international markets (Africa)
+**Location:** United Kingdom (primary market: UK + Western Europe), open to international markets
 **Website:** [TBD — in development]
 **Brand tone:** Confident, direct, jargon-lite. Sounds like a veteran azure platform engineer and architect who also understands a P&L — not a sales deck.
 
@@ -18,16 +18,21 @@
 
 ## 2. The Problem We Solve
 
-For many pre-seed, seed-stage and Series A startups, a full-time CTO of infrastructure or an experienced senior architect costs £120,000 to £250,000 a year plus equity — unsustainable before product-market fit for an early stage start-up. Large managed service providers want long contracts and assign account managers who aren't technical. Meanwhile, whether its burning through Microsoft Founder's Hub credits you've received, bleeding hard-won venture capital or depleting your own capital on unoptimised Azure workloads, your financial runway can vanish in weeks without the right cost controls in place. 
+For many pre-seed, seed-stage and Series A startups, an experienced senior architect or a full-time CTO of infrastructure costs £120,000 to £250,000 a year plus equity — unsustainable before product-market fit for an early stage start-up. Large managed service providers want long contracts and assign account managers who aren't technical. Meanwhile, whether its burning through Microsoft Founder's Hub credits you've received, bleeding hard-won venture capital or depleting your own capital on unoptimised Azure workloads, your financial runway can vanish in weeks without the right cost controls in place. 
 
-BSV sits in that gap. A senior Azure architect, packaged into fixed-scope engagements, delivered directly. No account manager, no retainer lock-in, no junior subcontractors hidden behind the brand.
+BSV sits in that gap. A senior Azure architect and fractional CTO of infrastructure, packaged into fixed-scope engagements, delivered directly. No account manager, no retainer lock-in, no junior subcontractors hidden behind the brand.
+
+**Pain Points**
+- **AI Production Gap:** Many startups have a "wrapper" app using OpenAI, but they haven't built the Agentic Infrastructure (Vector DBs, private networking, prompt monitoring) required for scale.
+- **Enterprise-Ready Governance (DORA/ISO):** In 2026, UK and EU regulations (like the Digital Operational Resilience Act) are hitting hard. Startups selling to banks or healthcare must have their Azure Landing Zone hardened. 
+- **The "Cost Preservation" Specialist:** Founders are terrified of their $150k Azure credits or other funding vanishing in a short space of time due to poor planning or scaling or enforcing cost management governance mechanisms.
 
 **BSV sits in the gap:**
 - Too technical for a generalist agency
 - Too agile and affordable for a Big Four consultancy
 - Too independent and senior for a junior freelancer
 
-BSV delivers fractional CTO-level Azure strategy and hands-on architecture and deployments on a **packaged, time-boxed, outcome-focused** basis — little retainer lock-in, no account managers, no fluff. Deployments are based on Microsoft's verified architecture, ensuring startups are enterprise ready from Day 1, making future due diligence for Series A/B funding seamless. We use thousands of hours of community and Microsoft R&D and our value add is the customisation, orchestration and policy layer we wrap around the modules
+BSV delivers fractional CTO-level Azure strategy and hands-on architecture and deployments on a **packaged, time-boxed, outcome-focused** basis — little retainer lock-in, no account managers, no fluff. Deployments are based on Microsoft's verified and well-architected framework, ensuring startups are enterprise ready from Day 1, making future due diligence for next series of funding seamless. We use thousands of hours of community and Microsoft R&D and our value add is the customisation, orchestration and policy layer we wrap around the modules
 
 ---
 
@@ -37,20 +42,21 @@ BSV delivers fractional CTO-level Azure strategy and hands-on architecture and d
 
 | Attribute | Detail |
 |---|---|
-| **Funding stage** | Seed (£500K–£3M raised) to Series A (£3M–£15M raised), pre-revenue startups, self funded |
+| **Funding stage** | Seed (£500K–£3M raised) to Series A (£3M–£15M raised) |
 | **Headcount** | 1–30 people |
-| **Tech maturity** | Has a dev team (1–5 engineers) but no dedicated cloud architect or CTO |
-| **Cloud posture** | On Azure or evaluating Azure; may have inherited a messy setup from a previous agency |
-| **Pain points** | Preserving founders azure credits, Spiralling Azure bills, security audit failures, lack of a defensible architecture, needing to impress a technical due diligence team before a funding round, production-grade agentic AI infrastructure, enterprise-grade infrastructure and governance, infrastructure scalabiloity |
+| **Tech maturity** | Has a developer or team of developers (1–5 engineers) but no dedicated cloud architect or CTO |
+| **Cloud posture** | On Azure or evaluating Azure; may have inherited a messy setup from a previous agenc; Awarded Azure credits |
+| **Pain points** | Preserving founders azure credits, Spiralling Azure bills, security audit failures, lack of a defensible architecture, needing to impress a technical due diligence team before a funding round, production-grade agentic AI infrastructure, enterprise-grade infrastructure and governance, infrastructure scalability |
 | **Sector** | Startups, B2B SaaS, FinTech, HealthTech, LegalTech, PropTech, EdTech — regulated or semi-regulated industries preferred but not essential |
 | **Decision maker** | Founder/CEO, CTO (if exists), VP Engineering |
-| **Geography** | UK-first, secondarily EU, Africa and US-based companies with UK entities |
+| **Geography** | UK-first, secondarily EU, Africa EMEA and US-based companies with UK entities |
 
 ### Secondary ICP
 
 - **Pre-revenue startups** preparing for their first cloud deployment post-MVP
 - **Founders raising Series A** who need a "clean" Azure environment to pass technical due diligence
-- **CTOs at seed stage** who need a specialist Azure pair to accelerate a specific workload (AI/ML pipelines, event-driven architecture, compliance-ready infrastructure)
+- **Founders raising Series A** who need CTO of Infrastructure
+- **CEOs/CTOs at seed stage** who need a specialist Azure pair to accelerate a specific workload (AI/ML pipelines, event-driven architecture, compliance-ready infrastructure)
 
 ---
 
@@ -103,7 +109,7 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 
 ---
 
-### Package 4 — The Architecture Review & Roadmap (£3,200 fixed)
+### Package 4 — The Well-Architected Review & Roadmap (£3,200 fixed)
 *For startups with an existing Azure environment that needs a hard look.*
 - Full Azure Well-Architected Framework assessment (Reliability, Security, Cost Optimisation, Operational Excellence, Performance Optimisation)
 - Azure Advisor + Defender for Cloud findings triage
@@ -128,7 +134,7 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 
 ## Package 6 — The Cost Management Rescue (£2,800 fixed)
 *For startups with a runaway Azure bill or preparing for board scrutiny of cloud spend.*
-- Optimise and preserve Azure founders credits consumption, managing financial runway.
+- Extend your financial runway by optimising Azure consumption of your Azure Founders Hub credits, VC or self-funded capital.
 - Full cost analysis across all subscriptions (Cost Management + Billing)
 - Identification and elimination of idle/orphaned resources
 - Right-sizing recommendations for compute and storage
@@ -189,6 +195,7 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 - **Azure Partner Network** — working toward Solutions Partner designation (Digital & App Innovation)
 - **GitHub for Startups** — bundle-friendly for clients
 - **Target referral partners:** startup law firms (Stephenson Harwood, Mishcon startup desk), seed-stage VCs (Seedcamp, LocalGlobe), startup-focused accountants (Osome, Mazars startup division)
+- **Microsoft AI Cloud Partner Program** — 
 
 ---
 
@@ -196,11 +203,11 @@ BSV sells fixed-scope, outcome-defined packages — NOT hourly billing or open-e
 
 Use this to write bios, LinkedIn content, proposals, and case studies in the first person.
 
-- 10+ years in Azure platforms
+- 20+ years of broad-based IT industry experience; 10+ years in Azure platforms; .
 - Previously: senior roles at enterprise clients in FinTech, HealthTech and Public sector.
 - Microsoft certifications: AZ-104, AZ-305, AZ-400, CKA, Terraform Associate, FinOps certified practitioner
-- Deep expertise in: Azure landing zones, Entra ID, Microsoft Foundry, event-driven architecture (Event Grid, Service Bus), Azure Kubernetes Service, Azure DevOps, GitHub Enterprise, IaC (Terraform/Bicep), Automation, Networking, Data Platforms, AI & Innovation, Agentic AI.
-- Based in the UK; available to travel to client sites within the UK
+- Deep expertise in: Azure, Azure landing zones, Entra ID, Microsoft Foundry, Azure Kubernetes Service, DevOps, Git, GitHub Enterprise, IaC (Terraform/Bicep), Automation, Networking, Data Platforms, AI & Innovation, AI Agents, Platform Engineering, Hybrid cloud, Well-Architected Framework, Leadership.
+- Based in the UK; available to travel to client sites.
 - Speaks fluent "founder" — understands runway, burn rate, and the emotional reality of building a company
 
 ---

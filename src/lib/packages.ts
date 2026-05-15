@@ -156,7 +156,7 @@ export const PACKAGES: readonly Package[] = [
   {
     code: "BSV-PKG-04",
     slug: "architecture-review-and-roadmap",
-    name: "The Architecture Review and Roadmap",
+    name: "The Well-Architected Review and Roadmap",
     tagline:
       "For startups with an existing Azure environment that needs a hard look.",
     price: 3200,
@@ -232,7 +232,7 @@ export const PACKAGES: readonly Package[] = [
       "You leave with a tagging strategy and a clear path to extend founders credits as far as they will go.",
     ],
     deliverables: [
-      "Optimise and preserve Azure founders credits, protecting financial runway",
+      "xtend your financial runway by optimising Azure consumption of your Azure Founders Hub credits, VC or self-funded capital.",
       "Full cost analysis across all subscriptions (Cost Management and Billing)",
       "Identification and elimination of idle or orphaned resources",
       "Right-sizing recommendations for compute and storage",
