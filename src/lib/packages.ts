@@ -191,7 +191,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "15 business days",
     summary:
-      "This focused sprint aligns your tenant architecture with global security frameworks—ensuring your identity, data, and networking configurations are fully prepared fordeep-dive customer audits.",
+      "This focused sprint aligns your tenant architecture with industry security frameworks (CIS/ISO), ensuring your identity, data, and networking configurations are fully prepared for deep-dive customer audits. Define policies and map them to industry security policies.",
     scope: [
       "The Resilience Shield is a high-impact, 2-week engagement designed to harden your Azure environment against the strict regulatory frameworks (DORA, ISO 27001, and SOC2).",
       "A focused two-week push to get a tenant from default to defensible. The work is scoped against a real auditor's checklist, not a theoretical one.",
@@ -227,7 +227,7 @@ export const PACKAGES: readonly Package[] = [
     paymentTerms: "50/50",
     delivery: "8 business days",
     summary:
-      "Manage your financial runway and secure Azure cloud cost savings. Founders credits preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board.",
+      "Manage your financial runway and secure Azure cloud cost savings. Founders credits, VC or self funded capital preserved, idle resources retired, right-sizing and Reserved Instance advice, and a forecast you can show a board. For startups with a runaway Azure bill.",
     scope: [
       "An end-to-end pass over what you are spending and why. Idle resources are retired, compute and storage are right-sized, and Reserved Instance or Savings Plan options are quantified.",
       "You leave with a tagging strategy and a clear path to extend founders credits as far as they will go.",
