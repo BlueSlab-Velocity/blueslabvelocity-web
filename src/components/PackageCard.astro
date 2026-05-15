@@ -26,7 +26,7 @@ const { pkg } = Astro.props;
   </div>
   <div class="px-5 py-3 border-t border-[color:var(--color-rule)] flex items-baseline justify-between">
     <span class="mono text-sm text-[color:var(--color-fg-strong)]">
-      {formatGBP(pkg.price)}{pkg.priceSuffix ?? ""}
+      from {formatGBP(pkg.price)}{pkg.priceSuffix ?? ""}
     </span>
     <span class="mono text-xs text-[color:var(--color-muted)] group-hover:text-[color:var(--color-accent)] transition-colors">
       view spec →
