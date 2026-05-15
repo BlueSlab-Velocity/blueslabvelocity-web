@@ -25,13 +25,15 @@ const expertise = [
   "Azure landing zones",
   "Microsoft Entra ID",
   "Microsoft Foundry",
-  "Event-driven architecture (Event Grid, Service Bus)",
+  "Leadership",
   "Azure Kubernetes Service",
   "GitHub Enterprise and Azure DevOps",
   "Terraform and Bicep",
   "Networking and private connectivity",
   "Data platforms",
-  "Agentic AI infrastructure",
+  "AI Agents",
+  "Platform Engineering",
+  "Cost Management",
 ] as const;
 ---
 
@@ -43,10 +45,12 @@ const expertise = [
   <section class="container-page pt-10 sm:pt-16 pb-10 sm:pb-12 border-b border-[color:var(--color-rule)]">
     <Annotation label="about · principal" />
     <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[color:var(--color-fg-strong)] leading-[1.1] md:leading-[1.05] max-w-3xl text-balance">
-      The architect behind Blue Slab Velocity
+      Built in the enterprise. Deployed for founders.
     </h1>
     <p class="mt-5 text-base sm:text-lg text-[color:var(--color-fg)] max-w-2xl leading-relaxed text-pretty">
-      I started BSV because the founders I most wanted to work with could not afford the people they most needed. This is the alternative.
+      Most cloud consultancies give you one of two things: a junior engineer working from a playbook, or a senior partner who bills £350 an hour and never touches your infrastructure directly.
+      BSV is neither.
+      We bring enterprise-grade Azure architecture — the kind usually reserved for large banks, regulated healthcare systems and government programmes — and apply it at startup scale, startup speed, and startup-friendly pricing.
     </p>
   </section>
 
@@ -54,13 +58,24 @@ const expertise = [
     <div class="lg:col-span-7 space-y-6 text-[1.0625rem] leading-relaxed">
       <Annotation label="bio" />
       <p>
-        I am a senior Azure architect with more than ten years of platform engineering across FinTech, HealthTech and the UK public sector. I hold NSV (SC) clearance and a stack of current Microsoft and infrastructure certifications. I have built landing zones for regulated banks, taken AI services from prototype to production, and untangled enough inherited Azure tenants to know what good looks like.
+        BSV was founded by a senior Azure architect with over 20 years in the technology industry and more than a decade working exclusively in Azure platform environments.
+        That career has spanned FinTech, HealthTech, public sector and large-scale enterprise — designing and deploying the kind of infrastructure that has to work, because the consequences of it not working are serious.
+        Before founding BSV, that meant working at large technology consultancies with enterprise clients: Azure landing zones for regulated institutions, DevSecOps programmes for teams with strict compliance obligations, Kubernetes platforms at scale, and AI infrastructure built for production, not proof of concept.
+        It also meant holding SC (Security Check) clearance — the kind of background verification required when the work genuinely matters..
       </p>
+      <Annotation label="Why BSV Exists" />
       <p>
-        BSV is the company I would have wanted as a startup CTO. A senior practitioner you can hire by the package, who shows up, does the work, hands it over, and is honest about what is not in scope. No account manager between you and the architect. No subcontracted juniors with the brand on their email signature.
+        Early-stage startups do not lack ambition. They lack access.
+        A seasoned cloud architect or a fractional CTO of infrastructure costs between £120,000 and £250,000 a year before you factor in equity. Large managed service providers want long contracts and assign account managers who have never written a line of Terraform. Freelance marketplaces give you hourly billing and variable quality, with no accountability for the outcome.
+        Meanwhile, your Azure credits are burning. Your architecture is accumulating debt. And your next funding round will include a technical due diligence exercise you may not be ready for.
+        BSV was built to close that gap — not as a cheaper version of an enterprise consultancy, but as a fundamentally different model. Fixed-scope engagements. Direct access to the senior architect. Outcomes defined before work begins. No account managers, no retainer lock-in, no junior subcontractors hidden behind the brand.
       </p>
+
+      <Annotation label="A note on the name" />
       <p>
-        I work with one founder at a time per engagement and run no more than four at once. The cap is deliberate. It is what makes this model honest.
+      A slab is what you build on. Solid. Level. Load-bearing.
+      <p>Velocity is what happens when the foundation is right — when your team can deploy with confidence, scale without rework, and pass a security audit without scrambling.</p>
+      <p>That is the combination BSV is built on.</p>
       </p>
     </div>
 
@@ -80,7 +95,7 @@ const expertise = [
       <div>
         <Annotation label="based" />
         <p class="mono mt-3 text-sm text-[color:var(--color-fg-strong)]">United Kingdom · GMT/BST</p>
-        <p class="mt-1 text-sm text-[color:var(--color-muted)]">Available to travel to client sites within the UK.</p>
+        <p class="mt-1 text-sm text-[color:var(--color-muted)]">Availability to travel to client sites can be discussed.</p>
       </div>
     </aside>
   </section>
@@ -89,7 +104,7 @@ const expertise = [
     <div class="lg:col-span-4">
       <Annotation label="expertise" />
       <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
-        What I bring to the table
+        What we bring to the table
       </h2>
     </div>
     <div class="lg:col-span-7 lg:col-start-6">
@@ -115,7 +130,7 @@ const expertise = [
     <div class="lg:col-span-5">
       <Annotation label="how I work" />
       <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
-        How I work
+        How we work
       </h2>
     </div>
     <div class="lg:col-span-7">
@@ -155,6 +170,20 @@ const expertise = [
             <p class="mt-1 text-[color:var(--color-muted)]">Documentation written so the next engineer you hire is productive on day one.</p>
           </div>
         </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">06</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">We use Microsoft's Well-Architected Framework as our baseline</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">This means the infrastructure we deliver is built to pass technical due diligence from day one. We use thousands of hours of Microsoft and community R&D, then apply the customisation, policy and governance layer that makes it production-ready for your specific context.</p>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-[auto_1fr] gap-5">
+          <span class="mono text-xs text-[color:var(--color-muted)]">07</span>
+          <div>
+            <p class="font-medium text-[color:var(--color-fg-strong)]">Outcome based engagements</p>
+            <p class="mt-1 text-[color:var(--color-muted)]">We do not grow by billing more hours. We grow by delivering outcomes that make clients refer us to the next founder who needs the same thing.</p>
+          </div>
+        </li>
       </ol>
     </div>
   </section>
@@ -163,10 +192,10 @@ const expertise = [
     <div class="lg:col-span-5">
       <Annotation label="what I won't do" />
       <h2 class="mt-3 text-2xl font-semibold tracking-tight text-[color:var(--color-fg-strong)]">
-        What I will not do
+        What we are not and what we will not do
       </h2>
       <p class="mt-3 text-[color:var(--color-muted)]">
-        Saying no to the wrong work is how I deliver the right work.
+        Saying no to the wrong work is how we deliver the right work.
       </p>
     </div>
     <div class="lg:col-span-7">
@@ -176,16 +205,20 @@ const expertise = [
           <p class="mt-1 text-[color:var(--color-muted)] text-sm">Every engagement is fixed-scope and fixed-price, or a clearly bounded retainer with a 30-day notice.</p>
         </li>
         <li class="px-5 py-4">
-          <p class="font-medium text-[color:var(--color-fg-strong)]">AWS or GCP work</p>
-          <p class="mt-1 text-[color:var(--color-muted)] text-sm">BSV is Azure only. If you need a cloud-agnostic team, I will tell you who to call.</p>
-        </li>
-        <li class="px-5 py-4">
           <p class="font-medium text-[color:var(--color-fg-strong)]">Equity in lieu of payment</p>
           <p class="mt-1 text-[color:var(--color-muted)] text-sm">BSV is a service business, not a co-investor. The cap table stays clean.</p>
         </li>
         <li class="px-5 py-4">
           <p class="font-medium text-[color:var(--color-fg-strong)]">Work outside the ICP</p>
-          <p class="mt-1 text-[color:var(--color-muted)] text-sm">If you are a 5,000-person enterprise, an MSP will serve you better. I am built for the seed-to-Series-A reality.</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">If you are a 5,000-person enterprise, an MSP will serve you better. We are built for the pre-seed to Series-A reality.</p>
+        </li>
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">Generalists</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">We are not a generalist agency that does Azure as a side service alongside web builds and SEO. We are a specialist Azure architecture practice. The work is technical. The delivery is direct. The result is infrastructure your team can own and operate confidently, without coming back to us every time something needs to change.</p>
+        </li>
+        <li class="px-5 py-4">
+          <p class="font-medium text-[color:var(--color-fg-strong)]">Software house</p>
+          <p class="mt-1 text-[color:var(--color-muted)] text-sm">We are not a software house. We are not a staffing firm. We are not a vendor.</p>
         </li>
       </ul>
     </div>
