@@ -3,8 +3,8 @@ export const SITE = {
   shortName: "BSV",
   url: "https://www.blueslabvelocity.com",
   description:
-    "Fractional Azure architecture for seed and Series A startups. Fixed-price packages, senior-only delivery, no retainers required.",
-  email: "hello@blueslabvelocity.com",
+    "Fractional Azure architecture for seed and Series A startups. Enterprise-grade at startup scale. Fixed-price packages, senior-only delivery, no retainers required.",
+  email: "enquiries@blueslabvelocity.com",
   locale: "en-GB",
   twitter: "",
 } as const;
