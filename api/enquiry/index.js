@@ -18,7 +18,7 @@ module.exports = async function (context) {
   // Same-origin form post check
   const origin = req.headers["origin"] || req.headers["Origin"] || "";
   const referer = req.headers["referer"] || req.headers["Referer"] || "";
-  const allowed = ["https://www.blueslabvelocity.com", "https://blueslabvelocity.com"];
+  const allowed = ["https://www.blueslabvelocity.com", "https://blueslabvelocity.com", "https://calm-desert-05c7d7b03.7.azurestaticapps.net"];
   const isAllowed = allowed.some((a) => origin.startsWith(a) || referer.startsWith(a));
   if (!isAllowed && process.env.NODE_ENV === "production") {
     context.res = { status: 403, body: "Forbidden" };
